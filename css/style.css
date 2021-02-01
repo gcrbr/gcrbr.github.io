@@ -1,0 +1,92 @@
+:root {
+  --backColor: #e17055;
+  --foreColor: #ffffff;
+}
+
+body {
+  margin: 0;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  font-family: 'Open Sans';
+  background: var(--backColor);
+  color: var(--foreColor);
+  animation: backgroundAnimation 15s infinite;
+}
+
+#inside {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 5px;
+  width: 100%;
+}
+
+#logo {
+  font-size: 50px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.box {
+  margin: 10px auto auto auto;
+  border: 1px solid var(--foreColor);
+  border-radius: 5px;
+  padding: 5px 0 5px 0;
+  font-size: 25px;
+  width: 80%;
+}
+
+.social-link {
+  color: white;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+#visitor-info > #title {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#ip, #geo_info {
+  font-family: Courier New;
+}
+
+#geo_info {
+  font-size: 15px;
+}
+
+@keyframes backgroundAnimation{
+  0% {
+    background: #4a69bd;
+  }
+  16.5% {
+    background: #1e3799;
+  }
+  33% {
+    background: #60a3bc;
+  }
+  49.5% {
+    background: #3c6382;
+  }
+  66% {
+    background: #38ada9;
+  }
+  82.5% {
+    background: #079992;
+  }
+  100% {
+    background: #4a69bd;
+  }
+}
+
+* {
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
