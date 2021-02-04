@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10.0, minimum-scale=1, user-scalable=1" />
+    <title>Mappa dei Quartieri di Napoli</title>
+    <style>
+      html,body{
+          margin: 0;
+          width:100%;
+          height:100%;
+      }
+      #map {
+          height:100%;
+          width:100%;
+          margin:0;
+          border:0px solid;
+          outline: none;
+       }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      var src = 'quartieri2001.kml';
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: new google.maps.LatLng(40.8440181, 14.2611898),
+          zoom: 2,
+          mapTypeId: 'roadmap'
+        });
+        var kmlLayer = new google.maps.KmlLayer(src, {
+          suppressInfoWindows: true,
+          preserveViewport: false,
+          map: map
+        });
+      }
+    </script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap">
+    </script>
+  </body>
+</html>
